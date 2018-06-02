@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/05/2018 03:04:14 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.demo2.models.PacienteAlumno" table="PacienteAlumno" catalog="ClinicaBD" optimistic-lock="version">
+        <id name="dniAlumno" type="int">
+            <column name="dniAlumno" />
+            <generator class="assigned" />
+        </id>
+        <property name="codigoAlumno" type="java.lang.Integer">
+            <column name="codigoAlumno" />
+        </property>
+        <property name="nombresAlumno" type="string">
+            <column name="nombresAlumno" length="45" />
+        </property>
+        <property name="apellidosAlumno" type="string">
+            <column name="apellidosAlumno" length="45" />
+        </property>
+        <property name="facultad" type="string">
+            <column name="facultad" length="45" />
+        </property>
+        <property name="escuela" type="string">
+            <column name="escuela" length="45" />
+        </property>
+        <property name="sexo" type="string">
+            <column name="sexo" length="45" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="45" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="45" />
+        </property>
+        <property name="tipoDescuento" type="java.lang.Integer">
+            <column name="tipoDescuento" />
+        </property>
+    </class>
+</hibernate-mapping>

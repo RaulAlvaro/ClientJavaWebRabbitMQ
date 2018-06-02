@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+
+        <h:outputStylesheet library="css" name="bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <h:outputScript library="js" name="bootstrap.min.js"/>
+        <title>Registro Alumno Clínica Universitaria</title>
+        <style type="text/css">
+            .col-xs-updated {        
+                width: 92% !important;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div style="background-color: #000"> 
+                <h1 style="text-align: center; color: #ffffff; margin-top: 0; padding: 1em;">Clinica Universitaria de la UNMSM</h1>
+            </div>
+        <h:form>
+            
+            
+            <div class="container">
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="Inicio" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            Dropdown <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Registro Alumno</a></li>
+                            <li><a href="#">Registro Externo</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h2>Registro de Estudiante</h2>
+                <hr></hr>
+                <h3>Ingrese el código del estudiante:</h3>
+                
+                <div class="row" style="text-align: center">
+                    <h:inputText value="#{pacienteAlumnoBean.codigoAlumno}"></h:inputText>
+                </div>
+                <div class="row" style="text-align: center">
+                    <h:outputLabel value="#{pacienteAlumnoBean.msjdataalumno}"/>
+                </div>
+                <div class="row" style="text-align: center">
+                    <h:commandButton value="Buscar" action="#{pacienteAlumnoBean.cargarAlumno()}"></h:commandButton><br></br>
+                </div>
+                <hr></hr>
+                <h4>DATOS PERSONALES</h4>
+                <div class="row" style="margin: 2em;">
+                    <div class="col-md-4">
+                        <div class="col-md-4">
+                            <h:outputLabel value="Dni"/>
+                        </div>
+                        <div class="col-md-8">
+                            <h:inputText value="#{pacienteAlumnoBean.dniAlumno}"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-4">
+                            <h:outputLabel value="Nombres"/>
+                        </div>
+                        <div class="col-md-8">
+                            <h:inputText value="#{pacienteAlumnoBean.nombresAlumno}" disabled="true" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-4">
+                            <h:outputLabel value="Apellidos"/>
+                        </div>
+                        <div class="col-md-8">
+                            <h:inputText value="#{pacienteAlumnoBean.apellidosAlumno}" disabled="true"/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin: 2em;">
+                    <div class="col-md-6">
+                        <div class="col-md-4">
+                            <h:outputLabel value="Facultad" styleClass="control-label col-sm-2" />
+                        </div>
+                        <div class="col-md-8">
+                            <h:inputText value="#{pacienteAlumnoBean.facultad}" disabled="true"/>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="col-md-4">
+                            <h:outputLabel value="Escuela" styleClass="control-label col-sm-2" />
+                        </div>
+                    
+                        <div class="col-md-8">
+                            <h:inputText value="#{pacienteAlumnoBean.escuela}" disabled="true"/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin: 2em;">
+                    <div class="col-md-4">
+                        <div class="col-md-4">
+                            <h:outputLabel value="Sexo"/>
+                        </div>
+                        <div class="col-md-8">
+                            <h:inputText value="#{pacienteAlumnoBean.sexo}" disabled="true"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-4">
+                            <h:outputLabel value="Telefono"/>
+                        </div>
+                        <div class="col-md-8">
+                            <h:inputText value="#{pacienteAlumnoBean.telefono}" disabled="true"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-4">
+                            <h:outputLabel value="Direccion"/>
+                        </div>
+                        <div class="col-md-8">
+                            <h:inputText value="#{pacienteAlumnoBean.direccion}" disabled="true"/>
+                        </div>
+                    </div>
+                </div>
+                <hr></hr>
+                <h3>¿Cuenta con algun beneficio de la oficina de Bienestar?</h3>
+              
+                <div class="row" style="text-align: center">
+                    <h:inputText value="#{pacienteAlumnoBean.dniAlumno}"></h:inputText>
+                </div>
+                <div class="row" style="text-align: center">
+                    <h:outputLabel value="#{pacienteAlumnoBean.msjdsctoalumno}"/>
+                </div>
+                <div class="row" style="text-align: center">
+                    <h:commandButton value="Buscar" action="#{pacienteAlumnoBean.cargarDescuento()}"></h:commandButton><br></br>
+                </div>
+                <div style="margin: 2em;    ">
+                    <div class="col-md-6">
+                        <h:outputLabel value="Tipo descuento"/>
+                    </div>
+                    <div class="col-md-6">
+                        <h:inputText value="#{pacienteAlumnoBean.tipoDescuento}" disabled="true"/>
+                    </div>
+                </div>
+                
+                <div class="row" >
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                    <h:commandButton style="margin-top: 2em;"  value="Guardar" action="#{pacienteAlumnoBean.addPacienteAlumno()}"></h:commandButton><br></br>
+                    </div>
+                </div>
+                    
+                
+                
+            </div>    
+
+        </h:form>
+        
+
+    </h:body>
+</html>
+
